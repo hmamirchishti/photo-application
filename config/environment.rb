@@ -2,8 +2,8 @@
 require File.expand_path('../application', __FILE__)
 
 ActionMailer::Base.smtp_settings = {
-    :user_name => 'amir_photo_application',
-    :password => 'Admin123',
+    :user_name => ENV["SendGrid_USERNAME"],
+    :password => ENV["SendGrid_PASSWORD"],
     :domain => 'heroku.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,
